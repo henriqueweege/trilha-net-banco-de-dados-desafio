@@ -129,7 +129,7 @@ ORDER BY
 
 
 /*
-Query 9
+Query 10
 Buscar o nome do filme e o gênero
 */
 SELECT 
