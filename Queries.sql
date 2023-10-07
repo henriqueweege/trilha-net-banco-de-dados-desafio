@@ -23,7 +23,7 @@ ASC
 
 /*
 Query 3
-Buscar pelo filme de volta para o futuro, trazendo o nome, ano e a duração
+Buscar pelo filme de volta para o futuro, trazendo o nome, ano e a duraÃ§Ã£o
 */
 SELECT 
 	Nome, Ano, Duracao
@@ -35,7 +35,7 @@ WHERE
 
 /*
 Query 4
-Buscar os filmes lançados em 1997
+Buscar os filmes lanÃ§ados em 1997
 */
 SELECT 
 	Nome, Ano, Duracao
@@ -47,7 +47,7 @@ WHERE
 
 /*
 Query 5
-Buscar os filmes lançados APÓS o ano 2000
+Buscar os filmes lanÃ§ados APÃ“S o ano 2000
 */
 SELECT
 	Nome, Ano, Duracao
@@ -74,7 +74,7 @@ ASC
 
 /*
 Query 7 
-Buscar a quantidade de filmes lançadas no ano, agrupando por ano, ordenando pela duracao em ordem decrescente
+Buscar a quantidade de filmes lanÃ§adas no ano, agrupando por ano, ordenando pela duracao em ordem decrescente
 */
 SELECT
 	Ano,
@@ -85,7 +85,7 @@ GROUP BY
 	Ano
 ORDER BY
 	AVG(Duracao) DESC
--- Embora o enunciado peça para ordenar pela duração, o resultado da imagem parece ser ordenado pela quantidade, segue a query para este caso.
+-- Embora o enunciado peÃ§a para ordenar pela duraÃ§Ã£o, o resultado da imagem parece ser ordenado pela quantidade, segue a query para este caso.
 SELECT
 	Ano,
 	COUNT(*) as Quantidade
@@ -96,7 +96,10 @@ GROUP BY
 ORDER BY
 	Quantidade DESC
 
-
+/*
+Query 8
+Buscar os Atores do gÃªnero masculino, retornando o PrimeiroNome, UltimoNome
+*/
 SELECT TOP(15)
 	Id,
 	PrimeiroNome,
@@ -110,7 +113,7 @@ WHERE
 
 /*
 Query 9
-Buscar os Atores do gênero feminino, retornando o PrimeiroNome, UltimoNome, e ordenando pelo PrimeiroNome
+Buscar os Atores do gÃªnero feminino, retornando o PrimeiroNome, UltimoNome, e ordenando pelo PrimeiroNome
 */
 SELECT 
 	Id,
@@ -127,7 +130,7 @@ ORDER BY
 
 /*
 Query 9
-Buscar o nome do filme e o gênero
+Buscar o nome do filme e o gÃªnero
 */
 SELECT 
 	Filmes.Nome,
@@ -142,7 +145,7 @@ INNER JOIN Generos
 
 /*
 Query 11  
-Buscar o nome do filme e o gênero do tipo "Mistério"
+Buscar o nome do filme e o gÃªnero do tipo "MistÃ©rio"
 */
 SELECT 
 	Filmes.Nome,
@@ -154,7 +157,7 @@ INNER JOIN FilmesGenero
 INNER JOIN Generos 
 	ON Generos.Id = FilmesGenero.IdGenero 
 WHERE 
-	Generos.Genero = 'Mistério'
+	Generos.Genero = 'MistÃ©rio'
 
 
 /*
